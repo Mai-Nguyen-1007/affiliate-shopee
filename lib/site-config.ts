@@ -19,7 +19,7 @@ export function getAffiliateId(): string {
 }
 
 export const FACEBOOK_POST_URL =
-  process.env.FACEBOOK_POST_URL?.trim() || DEFAULT_FACEBOOK_POST_URL;
+  process.env.DEFAULT_FACEBOOK_POST_URL?.trim() ?? "";
 
 /** Nhóm Zalo thông báo lên mã */
 export const ZALO_NOTIFY_GROUP_URL =
