@@ -1,11 +1,18 @@
 /** Cấu hình — ưu tiên biến môi trường (Vercel / .env.local), fallback khi không set */
 
-const DEFAULT_AFFILIATE_ID = process.env.DEFAULT_AFFILIATE_ID;
-const DEFAULT_FACEBOOK_POST_URL = process.env.DEFAULT_AFFILIATE_ID;
-const DEFAULT_ZALO_NOTIFY_GROUP_URL = process.env.DEFAULT_ZALO_NOTIFY_GROUP_URL;
-const DEFAULT_ZALO_HELP_URL = process.env.DEFAULT_ZALO_HELP_URL;
+const DEFAULT_AFFILIATE_ID =
+  process.env.DEFAULT_AFFILIATE_ID ?? "";
 
-/** Chỉ gọi từ server (vd. Route Handler). Không import trong `"use client"`. */
+const DEFAULT_FACEBOOK_POST_URL =
+  process.env.DEFAULT_FACEBOOK_POST_URL ?? "";
+
+const DEFAULT_ZALO_NOTIFY_GROUP_URL =
+  process.env.DEFAULT_ZALO_NOTIFY_GROUP_URL ?? "";
+
+const DEFAULT_ZALO_HELP_URL =
+  process.env.DEFAULT_ZALO_HELP_URL ?? "";
+
+/** Chỉ gọi từ server (vd. Route Handler). Không import trong "use client". */
 export function getAffiliateId(): string {
   const v = process.env.DEFAULT_AFFILIATE_ID?.trim();
   return v || DEFAULT_AFFILIATE_ID;
