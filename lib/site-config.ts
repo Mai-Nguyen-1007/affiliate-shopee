@@ -17,9 +17,10 @@ export function getAffiliateId(): string {
   const v = process.env.DEFAULT_AFFILIATE_ID?.trim();
   return v || DEFAULT_AFFILIATE_ID;
 }
+
 /** Mở bài viết để comment */
 export const FACEBOOK_POST_URL =
-  process.env.DEFAULT_FACEBOOK_POST_URL?.trim() ?? "";
+  process.env.FACEBOOK_POST_URL?.trim() || DEFAULT_FACEBOOK_POST_URL;
 
 /** Nhóm Zalo thông báo lên mã */
 export const ZALO_NOTIFY_GROUP_URL =
