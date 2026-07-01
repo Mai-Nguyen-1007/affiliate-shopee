@@ -3,6 +3,9 @@
 const DEFAULT_AFFILIATE_ID =
   process.env.DEFAULT_AFFILIATE_ID ?? "";
 
+const DEFAULT_FACEBOOK_POST_URL =
+  process.env.DEFAULT_FACEBOOK_POST_URL ?? "";
+
 const DEFAULT_ZALO_NOTIFY_GROUP_URL =
   process.env.DEFAULT_ZALO_NOTIFY_GROUP_URL ?? "";
 
@@ -14,6 +17,9 @@ export function getAffiliateId(): string {
   const v = process.env.DEFAULT_AFFILIATE_ID?.trim();
   return v || DEFAULT_AFFILIATE_ID;
 }
+
+export const FACEBOOK_POST_URL =
+  process.env.NEXT_PUBLIC_FACEBOOK_POST_URL ?? "";
 
 /** Nhóm Zalo thông báo lên mã */
 export const ZALO_NOTIFY_GROUP_URL =
